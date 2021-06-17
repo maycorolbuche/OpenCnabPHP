@@ -67,7 +67,7 @@ class Registro1 extends Generico1 {
             'required' => true),
         'versa_layout' => array(//07.1
             'tamanho' => 3,
-            'default' => '000',
+            'default' => '020',
             'tipo' => 'int',
             'required' => true),
         'filler2' => array(//08.1
@@ -105,7 +105,7 @@ class Registro1 extends Generico1 {
             'default' => '000',
             'tipo' => 'int',
             'required' => true),
-        'situacao_arquivo' => array(//11.1
+        'situacao_arquivo_' => array(//11.1
             'tamanho' => 2,
             'default' => ' ',
             'tipo' => 'alfa',
