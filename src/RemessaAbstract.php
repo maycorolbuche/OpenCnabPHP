@@ -24,7 +24,7 @@ abstract class RemessaAbstract {
 
         self::$banco = $banco;
         self::$layout = strtolower($layout);
-        $class = '\CnabPHP\resources\\B' . self::$banco . '\remessa\\' . self::$layout . '\Registro0';
+        $class = '\CnabPHP\resources\\B' . str_pad (self::$banco,3,"0",STR_PAD_LEFT) . '\remessa\\' . self::$layout . '\Registro0';
         self::$entryData = $data;
         self::$hearder = new $class($data);
         self::$children = array();
@@ -71,7 +71,7 @@ abstract class RemessaAbstract {
      */
     public function addLote(array $data) {
         if (strpos(self::$layout, '240')) {
-            $class = '\CnabPHP\resources\\B' . self::$banco . '\remessa\\' . self::$layout . '\Registro1';
+            $class = '\CnabPHP\resources\\B' . str_pad (self::$banco,3,"0",STR_PAD_LEFT) . '\remessa\\' . self::$layout . '\Registro1';
             $loteData = $data ? $data : RemessaAbstract::$entryData;
             $lote = new $class($loteData);
             self::$children[0]->addChild($lote);
