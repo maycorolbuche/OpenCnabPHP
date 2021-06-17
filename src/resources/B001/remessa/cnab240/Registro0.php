@@ -60,11 +60,33 @@ class Registro0 extends Generico0
 			'default'=>'0',
 			'tipo'=>'int',
 			'required'=>true),
-		'uso_bb1'=>array( // 07.0
-			'tamanho'=>20,
-			'default'=>' ',
-			'tipo'=>'alfa',
-			'required'=>true),
+
+        'convenio' => array(//07.0
+            'tamanho' => 9,
+            'default' => '0',
+            'tipo' => 'int',
+            'required' => true),
+        'cobranca' => array(//07.0
+            'tamanho' => 4,
+            'default' => '0014',
+            'tipo' => 'int',
+            'required' => true),
+        'carteira' => array(//07.0
+            'tamanho' => 2,
+            'default' => '0',
+            'tipo' => 'int',
+            'required' => true),
+        'variacao' => array(//07.0
+            'tamanho' => 3,
+            'default' => '000',
+            'tipo' => 'int',
+            'required' => true),
+        'filler1_2' => array(//07.0
+            'tamanho' => 2,
+            'default' => ' ',
+            'tipo' => 'alfa',
+            'required' => true),
+
 		'agencia'=>array( // 08.0
 			'tamanho'=>5,
 			'default'=>'0',
@@ -127,7 +149,7 @@ class Registro0 extends Generico0
 			'required'=>true),
 		'versao_layout'=>array(//20.0
 			'tamanho'=>3,
-			'default'=>'000',
+			'default'=>'030',
 			'tipo'=>'int',
 			'required'=>true),
 		'densidade_gravacao'=>array(//21.0
@@ -140,25 +162,31 @@ class Registro0 extends Generico0
 			'default'=>' ',
 			'tipo'=>'alfa',
 			'required'=>true),
-		'situacao_arquivo2'=>array(//23.0
+		'filler5'=>array(//23.0
 			'tamanho'=>20,
 			'default'=>' ',
 			'tipo'=>'alfa',
 			'required'=>true),
-		'filler5'=>array(
-			'tamanho'=>14,
+
+		'filler6_1'=>array(
+			'tamanho'=>11,
 			'default'=>' ',
 			'tipo'=>'alfa',
 			'required'=>true),
-		'filler6'=>array(		//Caso a versão do leiaute seja 30,
-			'tamanho'=>3,			//Deve ser preenchido com 'zeros' nas posições 226 a 228.
-			'default'=>'000',
+		'filler6_2'=>array(
+			'tamanho'=>3,
+			'default'=>' ',
 			'tipo'=>'alfa',
 			'required'=>true),
-		'filler7'=>array(
+		'filler6_3'=>array(
+			'tamanho'=>3,
+			'default'=>'0',
+			'tipo'=>'int',
+			'required'=>true),
+		'filler6_4'=>array(
 			'tamanho'=>12,
 			'default'=>' ',
 			'tipo'=>'alfa',
-			'required'=>true)
+			'required'=>true),
 	);
 }
