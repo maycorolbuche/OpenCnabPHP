@@ -137,13 +137,13 @@ class Generico1 extends RegistroRemAbstract
 
     public function inserirDetalhe($data)
     {
-        $class = 'CnabPHP\resources\\B' . RemessaAbstract::$banco . '\remessa\\' . RemessaAbstract::$layout . '\Registro3P';
+        $class = 'CnabPHP\resources\\B' . str_pad(RemessaAbstract::$banco,3,"0",STR_PAD_LEFT) . '\remessa\\' . RemessaAbstract::$layout . '\Registro3P';
         $this->children[] = new $class($data);
     }
 
     public function inserirTransferencia($data)
     {
-        $class = 'CnabPHP\resources\\B' . RemessaAbstract::$banco . '\remessa\\' . RemessaAbstract::$layout . '\Registro3A';
+        $class = 'CnabPHP\resources\\B' . str_pad(RemessaAbstract::$banco,3,"0",STR_PAD_LEFT) . '\remessa\\' . RemessaAbstract::$layout . '\Registro3A';
         $this->children[] = new $class($data);
     }
 
@@ -179,7 +179,7 @@ class Generico1 extends RegistroRemAbstract
                 }
                 $child->getText();
             }
-            $class = 'CnabPHP\resources\\B' . RemessaAbstract::$banco . '\remessa\\' . RemessaAbstract::$layout . '\Registro5';
+            $class = 'CnabPHP\resources\\B' . str_pad(RemessaAbstract::$banco,3,"0",STR_PAD_LEFT) . '\remessa\\' . RemessaAbstract::$layout . '\Registro5';
             $registro5 = new $class($dataReg5);
             $registro5->getText();
         }
