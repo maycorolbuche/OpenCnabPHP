@@ -24,7 +24,7 @@ abstract class RemessaAbstract {
 
         self::$banco = $banco;
         self::$layout = strtolower($layout);
-        $class = '\CnabPHP\resources\\B' . self::$banco . '\remessa\\' . self::$layout . '\Registro0';
+        $class = '\CnabPHP\resources\\B' . str_pad (self::$banco,3,"0",STR_PAD_LEFT) . '\remessa\\' . self::$layout . '\Registro0';
         self::$entryData = $data;
         self::$hearder = new $class($data);
         self::$children = array();
